@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mostImportant questions</title>
+
+    <style>
+        p:nth-last-child() {
+            color: red;
+        }
+
+        .box {
+            background: black;
+            border: 1px solid #000;
+            min-width: 600px;
+            height: 80vh;
+            position: relative;
+        }
+
+        .box-1 {
+            background: blue;
+            border: 1px solid #000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box-2 {
+            background: green;
+            border: 1px solid #000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .box-3 {
+            background: yellow;
+            border: 1px solid #000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box-4 {
+            background: red;
+            border: 1px solid #000;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #modal {
+            min-width: 400px;
+            position: absolute;
+            /* top: 50%; */
+            /* left: 0%; */
+            /* right: 0; */
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 100%);
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: 0.6s;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .inner-box input,
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: 1px solid #555555;
+            outline: 0;
+        }
+
+        h3 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="modal">
+        <div class="header">
+            <h2>header</h2>
+            <h3 onclick="cutModal()">&timesbar;</h3>
+        </div>
+        <div class="inner-box">
+            <input type="text" placeholder="enter your username">
+            <input type="text" placeholder="enter your username">
+            <button type="button">submit</button>
+        </div>
+    </div>
+
+    <button onclick="onModal()">modal</button>
+    <!-- <div class="box">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div>
+        <div class="box-4"></div>
+    </div> -->
+
+    <div id="most">
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <!-- <span>Zahidkhan</span> -->
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+        <p>kingkhan</p>
+    </div>
+
+    <script>
+        var getValue = document.getElementById('most');
+
+        var data = getValue.children;
+        var a = 0;
+        function onModal() {
+            var myModalBox = document.getElementById('modal');
+
+            if (a == 0) {
+                myModalBox.style.transform = "translate(-50%, -50%)";
+                a = 1;
+            } else {
+                myModalBox.style.transform = "translate(-50%, 100%)"
+                a = 0;
+            }
+        }
+
+
+        // function onModal() {
+        //     var myModalBox = document.getElementById('modal');
+        //     myModalBox.style.transform = "translate(100%, -50%)"
+        // }
+        // function cutModal() {
+        //     var myModalBox = document.getElementById('modal');
+        //     myModalBox.style.transform = "translate(-100%, -50%)"
+
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for (value in data) {
+        //     if (data[value].matches("span")) {
+        //         data[value].style.color = "red";
+        //     }
+        // }
+
+        // for (value in data) {
+        //     if (value % 6 == 0) {
+        //         data[value].style.color = "red";
+        //     }
+        // }
+
+        console.log(data);
+    </script>
+
+</body>
+
+</html>
